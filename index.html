@@ -29,13 +29,14 @@
     <!--Booking Section-->
     <main class="main-content container">
 
-        <div class="booking-content">
+        <div id="welcome-text" class="booking-content">
             <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book./p>
         </div>
 
-
-        <div class="booking-form">
+        <div id="form" class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -48,7 +49,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -58,20 +59,24 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="firstClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p> <span onclick="handleTicketBooking('firstClass', true)">+</span>
+                        <span onclick="handleTicketBooking('firstClass', false)">-</span>
+                    </p>
                 </div>
             </div>
-            
+
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="economyClass-ticket" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <p> <span onclick="handleTicketBooking('economyClass', true)">+</span>
+                        <span onclick="handleTicketBooking('economyClass', false)">-</span>
+                    </p>
                 </div>
             </div>
             <div class="calculations">
@@ -80,7 +85,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="sub-total">$00</p>
                     </div>
                 </div>
 
@@ -89,7 +94,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax-total">$00</p>
                     </div>
                 </div>
                 <hr>
@@ -98,14 +103,19 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total-price">$00</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" class="btn-style">Book Now</button>
+        </div>
+        <div id="thanks-giving" class="justify-content-center align-items-center">
+            <h2>Thank You</h2>
+            <h5>Please check your email for further review</h5>
         </div>
     </main>
 
+    <script src="script.js"></script>
     <!--Thank You-->
 </body>
 
